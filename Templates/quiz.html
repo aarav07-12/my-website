@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Python Quiz</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            MY PORTFOLIO
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+            <a href="/login">Login</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- QUIZ -->
+
+    <section class="calculator-page">
+
+        <div class="calculator-card">
+
+            <h1>🧠 Python Quiz</h1>
+
+            {% if question %}
+
+                <p>
+                    Question {{ question_number }} of {{ total_questions }}
+                </p>
+
+                <h2>{{ question.text }}</h2>
+
+                <form method="POST">
+
+                    {% for option in question.options %}
+
+                        <label class="quiz-option">
+
+                            <input
+                                type="radio"
+                                name="answer"
+                                value="{{ option }}"
+                                required
+                            >
+
+                            {{ option }}
+
+                        </label>
+
+                    {% endfor %}
+
+                    <button type="submit">
+                        Next Question 🚀
+                    </button>
+
+                </form>
+
+            {% else %}
+
+                <h2>🎉 Quiz Complete!</h2>
+
+                <p class="quiz-score">
+                    Your score:
+                    <strong>{{ score }}</strong>
+                    / {{ total_questions }}
+                </p>
+
+                <a href="/quiz" class="btn secondary">
+                    🔄 Play Again
+                </a>
+
+            {% endif %}
+
+
+            <a href="/python-projects"
+               class="back-projects">
+
+                ← Back to Python Projects
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 My Portfolio | Built with Python 🐍
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

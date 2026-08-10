@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">MY PORTFOLIO</div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+            <a href="/login">Login</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p class="small-title">WELCOME TO MY WEBSITE 👋</p>
+
+            <h1>
+                Hi, I'm <span>Aarav</span>
+            </h1>
+
+            <h2>Python & Web Developer 🚀</h2>
+
+            <p>
+                I love coding, building websites, creating projects
+                and learning new technologies.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/projects" class="btn">
+                    View My Projects
+                </a>
+
+                <a href="/contact" class="btn secondary">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="code-window">
+
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <pre>
+<span class="purple">def</span> <span class="blue">create_website</span>():
+    skills = [
+        <span class="green">"HTML"</span>,
+        <span class="green">"CSS"</span>,
+        <span class="green">"JavaScript"</span>,
+        <span class="green">"Python"</span>
+    ]
+
+    <span class="purple">return</span> skills
+                </pre>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section class="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skill-container">
+
+            <div class="skill">
+                <div class="skill-icon">🌐</div>
+                <h3>HTML</h3>
+                <p>Building website structures.</p>
+            </div>
+
+            <div class="skill">
+                <div class="skill-icon">🎨</div>
+                <h3>CSS</h3>
+                <p>Creating modern designs.</p>
+            </div>
+
+            <div class="skill">
+                <div class="skill-icon">⚡</div>
+                <h3>JavaScript</h3>
+                <p>Adding interactions.</p>
+            </div>
+
+            <div class="skill">
+                <div class="skill-icon">🐍</div>
+                <h3>Python</h3>
+                <p>Building powerful backends.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section class="projects">
+
+        <h2>Featured Projects</h2>
+
+        <p class="section-description">
+            Some of the projects I'm learning to build.
+        </p>
+
+        <div class="project-container">
+
+            <div class="project-card">
+
+                <div class="project-icon">🐍</div>
+
+                <h3>Python Projects</h3>
+
+                <p>
+                    Fun programs and experiments created
+                    while learning Python.
+                </p>
+
+                <a href="/projects">View Project →</a>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-icon">🌐</div>
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Websites created using HTML, CSS,
+                    JavaScript and Flask.
+                </p>
+
+                <a href="/projects">View Project →</a>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-icon">🎮</div>
+
+                <h3>Game Projects</h3>
+
+                <p>
+                    Creative games and interactive
+                    projects I'm working on.
+                </p>
+
+                <a href="/projects">View Project →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Call to Action -->
+    <section class="cta">
+
+        <h2>Let's Build Something Amazing 🚀</h2>
+
+        <p>
+            Want to see more of my projects?
+        </p>
+
+        <a href="/projects" class="btn">
+            Explore Projects
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 My Portfolio | Built with HTML, CSS & Python 🐍</p>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

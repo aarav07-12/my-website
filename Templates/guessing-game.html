@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Number Guessing Game</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            MY PORTFOLIO
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+            <a href="/login">Login</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- GAME -->
+
+    <section class="calculator-page">
+
+        <div class="calculator-card">
+
+            <h1>🎯 Number Guessing Game</h1>
+
+            <p>
+                I am thinking of a number between 1 and 100!
+            </p>
+
+
+            <form method="POST">
+
+                <input
+                    type="number"
+                    name="guess"
+                    placeholder="Enter your guess"
+                    min="1"
+                    max="100"
+                    required
+                >
+
+                <button type="submit">
+                    Guess 🚀
+                </button>
+
+            </form>
+
+
+            {% if message %}
+
+            <div class="calculator-result">
+
+                <h2>{{ message }}</h2>
+
+                {% if attempts %}
+                    <p>Attempts: {{ attempts }}</p>
+                {% endif %}
+
+            </div>
+
+            {% endif %}
+
+
+            {% if won %}
+
+            <a href="/guessing-game"
+               class="btn secondary">
+
+                🔄 Play Again
+
+            </a>
+
+            {% endif %}
+
+
+            <a href="/python-projects"
+               class="back-projects">
+
+                ← Back to Python Projects
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 My Portfolio | Built with Python 🐍
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Python Calculator</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            MY PORTFOLIO
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+            <a href="/login">Login</a>
+
+        </div>
+
+    </nav>
+
+
+    <section class="calculator-page">
+
+        <div class="calculator-card">
+
+            <h1>🐍 Python Calculator</h1>
+
+            <p>
+                This calculator is powered by Python and Flask.
+            </p>
+
+
+            <form method="POST">
+
+                <input
+                    type="number"
+                    name="number1"
+                    placeholder="First number"
+                    step="any"
+                    required
+                >
+
+
+                <select name="operation" required>
+
+                    <option value="add">
+                        ➕ Add
+                    </option>
+
+                    <option value="subtract">
+                        ➖ Subtract
+                    </option>
+
+                    <option value="multiply">
+                        ✖️ Multiply
+                    </option>
+
+                    <option value="divide">
+                        ➗ Divide
+                    </option>
+
+                    <option value="power">
+                        🔢 Power
+                    </option>
+
+                    <option value="remainder">
+                        🔄 Remainder
+                    </option>
+
+                </select>
+
+
+                <input
+                    type="number"
+                    name="number2"
+                    placeholder="Second number"
+                    step="any"
+                    required
+                >
+
+
+                {% if result is not none %}
+
+                <div class="calculator-result">
+
+                    <h2>Result</h2>
+
+                    <p>{{ result }}</p>
+
+                </div>
+
+                {% endif %}
+
+
+                <button type="submit">
+
+                    Calculate 🚀
+
+                </button>
+
+            </form>
+
+
+            <a href="/calculator"
+               class="btn secondary">
+
+                ← Back to Calculator
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 My Portfolio | Built with Python 🐍
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

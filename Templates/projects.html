@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Projects</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            MY PORTFOLIO
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+            <a href="/login">Login</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Projects -->
+
+    <section class="projects">
+
+        <h1>🚀 My Projects</h1>
+
+        <p class="section-description">
+            Here are some of the projects I have built while learning coding.
+        </p>
+
+
+        <div class="project-container">
+
+
+            <!-- Project 1 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🐍
+                </div>
+
+                <h3>Python Projects</h3>
+
+                <p>
+                    Fun Python programs and experiments that
+                    helped me learn programming and logical thinking.
+                </p>
+
+               <a href="/python-projects">
+                    View Projects →
+                </a>
+
+            </div>
+
+
+            <!-- Project 2 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🌐
+                </div>
+
+                <h3>My First Website</h3>
+
+                <p>
+                    A complete website created using HTML,
+                    CSS, JavaScript and Python Flask.
+                </p>
+
+                <a href="/">
+                    View Website →
+                </a>
+
+            </div>
+
+
+            <!-- Project 3 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🎮
+                </div>
+
+                <h3>Game Project</h3>
+
+                <p>
+                    A fun game project created while learning
+                    programming and game development.
+                </p>
+
+                <a href="#">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <!-- Project 4 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    💬
+                </div>
+
+                <h3>Contact System</h3>
+
+                <p>
+                    A contact form connected to a SQLite database
+                    that stores messages.
+                </p>
+
+                <a href="/contact">
+                    Try It →
+                </a>
+
+            </div>
+
+
+            <!-- Project 5 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🔐
+                </div>
+
+                <h3>Login System</h3>
+
+                <p>
+                    A Flask login system that protects the
+                    messages page.
+                </p>
+
+                <a href="/login">
+                    Try Login →
+                </a>
+
+            </div>
+
+
+            <!-- Project 6 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🚗
+                </div>
+
+                <h3>Car Game</h3>
+
+                <p>
+                    A future project where I will create my
+                    own car game using programming.
+                </p>
+
+                <a href="#">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Call To Action -->
+
+    <section class="cta">
+
+        <h2>More Projects Coming Soon 🚀</h2>
+
+        <p>
+            I'm learning more coding so I can build even bigger projects.
+        </p>
+
+        <a href="/contact" class="btn">
+            Contact Me
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 My Portfolio | Built with HTML, CSS & Python 🐍
+        </p>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

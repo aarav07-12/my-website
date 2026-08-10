@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Calculator</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            MY PORTFOLIO
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+            <a href="/login">Login</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- CALCULATOR -->
+
+    <section class="calculator-page">
+
+        <div class="real-calculator">
+
+            <h1>🧮 Calculator</h1>
+
+
+            <!-- DISPLAY -->
+
+            <input
+                type="text"
+                id="display"
+                class="calculator-display"
+                placeholder="0"
+                readonly
+            >
+
+
+            <!-- BUTTONS -->
+
+            <div class="calculator-buttons">
+
+                <button onclick="clearDisplay()" class="special">
+                    AC
+                </button>
+
+                <button onclick="backspace()" class="special">
+                    ⌫
+                </button>
+
+                <button onclick="addToDisplay('%')" class="operator">
+                    %
+                </button>
+
+                <button onclick="addToDisplay('/')" class="operator">
+                    ÷
+                </button>
+
+
+                <button onclick="addToDisplay('7')">
+                    7
+                </button>
+
+                <button onclick="addToDisplay('8')">
+                    8
+                </button>
+
+                <button onclick="addToDisplay('9')">
+                    9
+                </button>
+
+                <button onclick="addToDisplay('*')" class="operator">
+                    ×
+                </button>
+
+
+                <button onclick="addToDisplay('4')">
+                    4
+                </button>
+
+                <button onclick="addToDisplay('5')">
+                    5
+                </button>
+
+                <button onclick="addToDisplay('6')">
+                    6
+                </button>
+
+                <button onclick="addToDisplay('-')" class="operator">
+                    −
+                </button>
+
+
+                <button onclick="addToDisplay('1')">
+                    1
+                </button>
+
+                <button onclick="addToDisplay('2')">
+                    2
+                </button>
+
+                <button onclick="addToDisplay('3')">
+                    3
+                </button>
+
+                <button onclick="addToDisplay('+')" class="operator">
+                    +
+                </button>
+
+
+                <button onclick="addToDisplay('0')" class="zero">
+                    0
+                </button>
+
+                <button onclick="addToDisplay('.')">
+                    .
+                </button>
+
+                <button onclick="calculate()" class="equals">
+                    =
+                </button>
+
+            </div>
+
+
+            <!-- PYTHON CALCULATOR -->
+
+            <div class="python-calculator">
+
+                <h2>🐍 Python Calculator</h2>
+
+                <p>
+                    Try the calculator powered by Python!
+                </p>
+
+                <a href="/python-calculator"
+                   class="btn secondary">
+
+                    Open Python Calculator
+
+                </a>
+
+            </div>
+
+
+            <a href="/python-projects"
+               class="back-projects">
+
+                ← Back to Python Projects
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 My Portfolio | Built with Python 🐍
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function addToDisplay(value) {
+
+            document.getElementById("display").value += value;
+
+        }
+
+
+        function clearDisplay() {
+
+            document.getElementById("display").value = "";
+
+        }
+
+
+        function backspace() {
+
+            let display =
+                document.getElementById("display");
+
+            display.value =
+                display.value.slice(0, -1);
+
+        }
+
+
+        function calculate() {
+
+            let display =
+                document.getElementById("display");
+
+            try {
+
+                if (display.value === "") {
+                    return;
+                }
+
+                display.value =
+                    Function(
+                        '"use strict"; return (' +
+                        display.value +
+                        ')'
+                    )();
+
+            }
+
+            catch {
+
+                display.value = "Error";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
